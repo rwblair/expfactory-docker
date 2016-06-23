@@ -1,0 +1,45 @@
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Email Authenticated Battery Link</h4>
+        </div>
+        <div class="modal-body">
+            <div class="alert alert-info" role="alert">
+                <table class="table table-condensed table-striped">
+                    <tr><th>Battery</th><td>{{ hit.battery }}</td></tr>
+                    <tr><th>Owner</th><td>{{ hit.owner }}</td></tr>
+                    <tr><th>Mturk ID</th><td>{{ hit.mturk_id }}</td></tr>
+                    <tr><th>Hit Type ID</th><td>{{ hit.hit_type_id }}</td></tr>
+                    <tr><th>Creation Time</th><td>{{ hit.creation_time }}</td></tr>
+                    <tr><th>Title</th><td>{{ hit.title }}</td></tr>
+                    <tr><th>Description</th><td>{{ hit.description }}</td></tr>
+                    <tr><th>Keywords</th><td>{{ hit.keywords }}</td></tr>
+                    <tr><th>Status</th><td>{{ hit.status }}</td></tr>
+                    <tr><th>Reward</th><td>{{ hit.reward }}</td></tr>
+                    <tr><th>Lifetime in Hours</th><td>{{ hit.lifetime_in_hours }}</td></tr>
+                    <tr><th>Assignment Duration in Hours</th><td>{{ hit.assignment_duration_in_hours }}</td></tr>
+                    <tr><th>Max Assignments</th><td>{{ hit.max_assignments }}</td></tr>
+                    <tr><th>Auto Approval Delay in Seconds</th><td>{{ hit.auto_approval_delay_in_seconds }}</td></tr>
+                    <tr><th>Requester Annotation</th><td>{{ hit.requester_annotation }}</td></tr>
+                    <tr><th>Number of Similar Hits</th><td>{{ hit.number_of_similar_hits }}</td></tr>
+                    <tr><th>Review Status</th><td>{{ hit.review_status }}</td></tr>
+                    <tr><th>Number of Pending assignments</th><td>{{ hit.number_of_assignments_pending }}</td></tr>
+                    <tr><th>Number of Available Assignments</th><td>{{ hit.number_of_assignments_available }}</td></tr>
+                    <tr><th>Number of Completed Assignments</th><td>{{ hit.number_of_assignments_completed }}</td></tr>
+                    <tr><th>Number of Hits Approved</th><td>{{ hit.qualification_number_hits_approved }}</td></tr>
+                    <tr><th>Percent of Assignments Approved</th><td>{{ hit.qualification_percent_assignments_approved }}</td></tr>
+                    <tr><th>Qualification Adult</th><td>{{ hit.qualification_adult }}</td></tr>
+                    <tr><th>Qualification Locale</th><td>{{ hit.qualification_locale }}</td></tr>
+                    <tr><th>Qualification Custom</th><td>{{ hit.qualification_custom }}</td></tr>
+                    <tr><th>Sandbox</th><td>{{ hit.sandbox }}</td></tr>
+                </table>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
+
+

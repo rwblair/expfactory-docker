@@ -315,6 +315,16 @@ def clone_hit(request, bid, hid):
 
     return render(request, "turk/new_hit.html", context)
 
+@login_required
+def view_hit(request, bid, hid):
+    mturk_permission = check_mturk_access(request)
+    if mturk_permission != True:
+        return HttpResponseForbidden()
+
+    hit = get_object_or_404(HIT, pk=hid)
+    context = {"hit": hit}
+    return render(request, "turk/hit_details_modal.html", context)
+
 
 @login_required
 def edit_hit(request, bid, hid=None):
