@@ -15,7 +15,8 @@ class HITForm(ModelForm):
                   "assignment_duration_in_hours","max_assignments",
                   "auto_approval_delay_in_seconds","qualification_number_hits_approved",
                   "qualification_percent_assignments_approved","qualification_adult",
-                  "qualification_locale","qualification_custom")
+                  "qualification_locale","qualification_custom", "qualification_custom_operator",
+                  "qualification_custom_value")
 
     def clean(self):
         cleaned_data = super(HITForm, self).clean()
@@ -31,3 +32,13 @@ class HITForm(ModelForm):
         self.helper.layout = Layout()
         tab_holder = TabHolder()
         self.helper.add_input(Submit("submit", "Save"))
+
+class WorkerContactForm(forms.Form):
+    subject = forms.CharField(label="Subject")
+    message = forms.CharField(widget=forms.Textarea, label="Message")
+
+    def __init__(self, *args, **kwargs):
+        super(WorkerContactForm, self).__init__(*args, **kwargs)
+        self.helper = FormHelper(self)
+        self.helper.layout = Layout()
+        self.helper.add_input(Submit("submit", "Send"))
