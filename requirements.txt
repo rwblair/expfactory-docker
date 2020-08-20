@@ -23,7 +23,6 @@ django-dbbackup<2.3
 cognitiveatlas
 dropbox==1.6
 kombu<4
-opbeat
 ua-parser
 user-agents
 django-user-agents
